@@ -1,0 +1,192 @@
+@import "tailwindcss";
+
+
+
+* {
+    caret-color: transparent;
+  }
+  
+  p{
+    font-family: "Jura", sans-serif;
+  }
+
+  .custom-link {
+    color: #ffff;
+    text-decoration: none;
+    font-family: "Gruppo", sans-serif;
+    font-weight: 600;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .custom-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #A17A37;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  
+  .custom-link:hover {
+    color: #A17A37;
+    text-shadow: 0 0 10px #C7A166;
+  }
+  
+  .custom-link:hover::after {
+    transform: scaleX(1);
+  }
+  .content {
+    max-width: 400px; 
+  
+  }
+  .content h1 span {
+    font-weight: 700;
+    background: linear-gradient(90deg, #A17A37, #AA7107, #C7A166, #eeba97);
+    background-clip: text;
+    color: transparent;
+    background-size: 400% 400%;
+    font-family: 'Lobster', cursive;
+    display: inline-block;
+    animation: animate 1.5s ease-in-out infinite, gradient 3s ease infinite;
+    padding-bottom: 5px; 
+    line-height: 1.2;
+  }
+  .social-link a:hover{
+    color:#A87F1D;
+  }
+  .btn button{
+    background-color:#ac7b0b;
+  }
+  .btn button:hover{
+    background-color:#835705;
+  }
+
+  @keyframes gradient{
+    0%{
+      background-position: 0%;
+    }
+    50%{
+      background-position: 100%;
+    } 
+    100%{
+      background-position: 0%;
+    }
+  }
+  
+  @keyframes animate {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+  
+  .button-color {
+    color:#e6c374;
+    background-color: #A87F1D;
+  }
+  
+  .button-color:hover{
+    background-color:#855f1f;
+  }
+  
+  .dropdown{
+    background-color: #C7A166;
+    transition: 0.5s;
+  }
+  .dropdown a:hover {
+    background-color: #A87F1D; 
+  }
+  .changing-text {
+    font-size: 24px; /* Default for mobile */
+    font-weight: 600;
+    white-space: nowrap;
+    display: inline-block;
+  }
+  
+  .changing-text span{
+    position: relative;
+    background: linear-gradient(45deg, #A17A37, #AA7107, #C7A166, #EFDDD1);
+    background-clip: text;
+    color: transparent;
+  
+  }
+  
+  .changing-text span:before {
+    content: "Developer";
+    animation: words 20s infinite;
+  
+  }
+  
+  .changing-text span:after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px); 
+    height: 100%; 
+    right: -4px;
+    background-color: #292524;
+    border-left: 2px solid #A87F1D;
+    animation: cursor 0.8s infinite, typing 25s steps(24) infinite;
+  }
+  
+  @keyframes cursor {
+    to{
+      border-left: 2px solid #1f1b13;
+    }
+  }
+  @keyframes words{
+    0%,25%{
+      content: "Calisthenic";
+    }
+    26%,50%{
+      content: "US. Marine";
+    }
+    51%,75%{
+      content: "Software Engineer";
+    }
+    76%,100%{
+      content: "Aspired Cybersec";
+    }
+  }
+
+  .responsive{
+    background-image:linear-gradient(#af5c5c,#c93030);
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-position-x: right;
+    transition: background-size 500ms;
+  }
+  .responsive:hover{
+    background-size:100% 100%;
+    background-position-x: left;
+  }
+
+  @keyframes typing {
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+      width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+      width:calc(100% + 8px);
+    }
+  }
+  @media (min-width: 640px) { /* sm */
+    .changing-text {
+      width: 320px;
+      font-size: 28px;
+      text-align: left;
+    }
+  }
+  @media (min-width: 768px) { /* md */
+    .changing-text {
+      width: 360px;
+      font-size: 32px;
+    }
+  }
+  @media (min-width: 1024px) { /* lg */
+    .changing-text {
+      width: 380px;
+      font-size: 36px;
+    }
+  }
