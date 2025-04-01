@@ -150,7 +150,7 @@ function About() {
         <div className="flex-1 text-center items-center rounded-2xl ">
           <h2 className="text-2xl font-bold mb-5 border-b border-amber-500 p-1 ">{slides[currentSlide].title}</h2>
 
-          {(currentSlide === 1 || currentSlide === 2 || currentSlide === 4) && (
+          {(currentSlide === 0 || currentSlide === 2 || currentSlide === 4) && (
           <div className="flex justify-center items-center w-full ">
           <img
             src={slides[currentSlide].image}
@@ -161,7 +161,7 @@ function About() {
           )}
           {/* Artist section with img and thumbnail */}
           <div className=" flex justify-center items-center w-full ">
-            {currentSlide === 0 && (
+            {currentSlide === 3 && (
               <div className="flex justify-center items-center w-full mb-5">
                 <img
                   src={largeImage}
@@ -172,7 +172,7 @@ function About() {
               </div>
             )}
 
-            {currentSlide === 0 && (
+            {currentSlide === 3 && (
               <div className="flex-col w-[20%] mt-4 ml-auto">
                 {slides[currentSlide].thumbnails.map((thumbnail, index) => (
                   <img
@@ -186,7 +186,7 @@ function About() {
               </div>
             )}
           </div>
-          {currentSlide === 3 && (
+          {currentSlide === 1 && (
             <ul className="flex relative gap-4 h-[63vh] sm:h-[40vh] justify-between mx-3 2xl:mx-10">
               {slides[currentSlide].timeline.map((item, index) => (
                 <li key={index} className="btn h-[8vh] flex ">
