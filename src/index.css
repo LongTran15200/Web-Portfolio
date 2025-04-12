@@ -1,7 +1,6 @@
 @import "tailwindcss";
 
 
-
 * {
     caret-color: transparent;
   }
@@ -57,12 +56,18 @@
   }
   .social-link a:hover{
     color:#A87F1D;
+    transform:scale(150%)
   }
   .btn button{
     background-color:#ac7b0b;
+    font-family:'Roboto', sans-serif;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+    
   }
   .btn button:hover{
     background-color:#835705;
+    transform: translateY(-7px);
   }
 
   @keyframes gradient{
@@ -97,7 +102,8 @@
     transition: 0.5s;
   }
   .dropdown a:hover {
-    background-color: #A87F1D; 
+    background-color: #A87F1D;
+    
   }
   .changing-text {
     font-size: 24px; /* Default for mobile */

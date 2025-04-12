@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
+import { FaPython, FaJs, FaReact, FaNodeJs, FaGitAlt } from "react-icons/fa";
+import { DiMysql, DiMongodb } from "react-icons/di";
+import { SiDjango, SiTailwindcss } from "react-icons/si";
 import { BiCheck } from 'react-icons/bi';
-import GymImg from "../assets/Military.png"; 
+import GymImg from "../assets/Military.png";
+import FormalImg from "../assets/Formal2.png"; 
 import CookImg from "../assets/Cook.jpg";
 import FishingImg from "../assets/Fishing.jpg";
 import DrawingImg from "../assets/Drawing.jpg";
@@ -13,8 +17,26 @@ function About() {
   const slides = [
     {
       image:GymImg,
-      title: "I am a Marine Reservist",
-      description: "I Have a background in military.",
+      title: "Skill & Certification",
+      description: "Showcasing my skills and some IT/cybersecurity Certification.",
+      skills: {
+        programmingLanguages: [
+          { name: "Python", icon: <FaPython size={30} /> },
+          { name: "JavaScript", icon: <FaJs size={30} /> },
+        ],
+        frameworks: [
+          { name: "React", icon: <FaReact size={30} /> },
+          { name: "Django", icon: <SiDjango size={30} /> },
+        ],
+        databases: [
+          { name: "MySQL", icon: <DiMysql size={30} /> },
+          { name: "MongoDB", icon: <DiMongodb size={30} /> },
+        ],
+        tools: [
+          { name: "Git", icon: <FaGitAlt size={30} /> },
+          { name: "TailwindCSS", icon: <SiTailwindcss size={30} /> },
+        ],
+      },
     },
     { 
       title: "My Experience",
@@ -53,7 +75,7 @@ function About() {
 
         { month: "Jan", 
           year: "2025", 
-          event: "IT Junior Specialist Intern", 
+          event: "IT Administrator Intern", 
           image: OFSIImg, 
           company:"OFS International", 
           date:"Jan. 2025 – March. 2025",
@@ -66,7 +88,7 @@ function About() {
     {
       image:GymImg,
       title: "I am a Marine Reservist",
-      description: "I Have a background in military.",
+      description: "I have a Marine Reservist background, demonstrating my dedication, resilience, and ability to work effectively in high-pressure environments.",
     },
     {
       image: DrawingImg,
@@ -79,9 +101,9 @@ function About() {
       ],
     },
     {
-      image:GymImg,
-      title: "I am a Marine Reservist",
-      description: "I Have a background in military.",
+      image:FormalImg,
+      title: "Open to Opportunities",
+      description: "I am actively seeking Software Engineering opportunities where I can leverage my technical skills, problem-solving abilities, and passion for innovation. I am eager to contribute to meaningful projects, collaborate with talented teams, and grow as an engineer in a dynamic environment.",
     },
   ];
 
@@ -135,11 +157,11 @@ function About() {
   // }, [currentSlide]);
 
   return (
-    <div className="min-h-screen bg-stone-800 text-white flex flex-col gap-4 justify-center items-center">
-      <div className="flex flex-col w-8/9 sm:w-4/5 xl:w-2/3 2xl:w-2/4 lg:flex-row bg-stone-800 p-6 shadow-lg shadow-amber-500 min-h-[50rem] gap-2 mt-6 outline-amber-500 outline">
+    <div className="min-h-screen bg-stone-800 text-white flex flex-col gap-4 justify-center items-center pt-20">
+      <div className="flex flex-col w-8/9 items-ce sm:w-4/5 xl:w-2/3 2xl:w-2/4 lg:flex-row bg-stone-800 p-6 shadow-lg  min-h-[45rem] gap-2 mt-6 outline-amber-500 outline">
         <div className="flex-1  rounded-2xl">
-          <h2 className="text-4xl font-bold mx-2">About me</h2>
-          <p className="text-sm p-2 lg:text-lg font-mono border-t border-amber-500">
+          <h2 className="text-4xl font-bold mx-2 text-center">About me</h2>
+          <p className="text-sm p-2 md:text-lg font-mono border-t border-amber-500">
             I’m a senior at the University of Houston, majoring in Computer Science with a passion for Software Engineering and Cybersecurity. 
             I enjoy building web applications, solving technical challenges, and exploring security concepts to enhance system integrity. 
             Outside of coursework, I’ve also worked on small certifications to expand my knowledge in IT and security. 
@@ -147,15 +169,75 @@ function About() {
           </p>
         </div>
 
-        <div className="flex-1 text-center items-center rounded-2xl ">
-          <h2 className="text-2xl font-bold mb-5 border-b border-amber-500 p-1 ">{slides[currentSlide].title}</h2>
-
-          {(currentSlide === 0 || currentSlide === 2 || currentSlide === 4) && (
+        <div className="flex-1 text-center justify-center items-center rounded-2xl ">
+          <h2 className="text-2xl font-bold mb-6 border-b border-amber-500 p-[4.3px] ">{slides[currentSlide].title}</h2>
+          <div>
+          {currentSlide === 0 && (
+           <div className="space-y-6 mb-4">
+           <div className="flex items-center">
+             <h3 className="text-xl font-semibold mb-2">Languages:</h3>
+             <div className="flex gap-4 justify-center flex-wrap">
+               {slides[currentSlide].skills.programmingLanguages.map((skill, index) => (
+                 <div key={index} className="p-2 text-center group relative">
+                   <div className="text-center">{skill.icon}</div>
+                   <span className="absolute left-1/2 transform -translate-x-1/2 mb-2 p-1 bg-black text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                     {skill.name}
+                   </span>
+                 </div>
+               ))}
+             </div>
+           </div>
+         
+           <div className="flex items-center">
+             <h3 className="text-xl font-semibold mb-2">Frameworks:</h3>
+             <div className="flex gap-4 justify-center flex-wrap">
+               {slides[currentSlide].skills.frameworks.map((skill, index) => (
+                 <div key={index} className="p-2 text-center group relative">
+                   <div className="text-center">{skill.icon}</div>
+                   <span className="absolute left-1/2 transform -translate-x-1/2 mb-2 p-1 bg-black text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                     {skill.name}
+                   </span>
+                 </div>
+               ))}
+             </div>
+           </div>
+         
+           <div className="flex items-center">
+             <h3 className="text-xl font-semibold mb-2">Databases:</h3>
+             <div className="flex gap-4 justify-center flex-wrap">
+               {slides[currentSlide].skills.databases.map((skill, index) => (
+                 <div key={index} className="p-2 text-center group relative">
+                   <div className="text-center">{skill.icon}</div>
+                   <span className="absolute left-1/2 transform -translate-x-1/2 mb-2 p-1 bg-black text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                     {skill.name}
+                   </span>
+                 </div>
+               ))}
+             </div>
+           </div>
+         
+           <div className="flex items-center">
+             <h3 className="text-xl font-semibold mb-2">Tools:</h3>
+             <div className="flex gap-4 justify-center flex-wrap">
+               {slides[currentSlide].skills.tools.map((skill, index) => (
+                 <div key={index} className="p-2 text-center group relative">
+                   <div className="text-center">{skill.icon}</div>
+                   <span className="absolute left-1/2 transform -translate-x-1/2 mb-2 p-1 bg-black text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                     {skill.name}
+                   </span>
+                 </div>
+               ))}
+             </div>
+           </div>
+         </div>
+          )}
+          </div>
+          {( currentSlide === 2 || currentSlide === 4) && (
           <div className="flex justify-center items-center w-full ">
           <img
             src={slides[currentSlide].image}
             alt={slides[currentSlide].title}
-            className="w-full max-w-sm rounded-lg mb-4"
+            className="w-40 rounded-lg mb-4"
           />
           </div>
           )}
@@ -199,8 +281,8 @@ function About() {
 
                   {/* Event details */}
                   {selectedTimeline === index && (
-                    <div className={`absolute bg-stone-800 p-1 rounded-md mt-2 left-0 top-17 md:top-19 2xl:top-20 text-sm text-start w-full transition-opacity duration-500 ease-in-out ${loading ? "opacity-0" : "opacity-100"}`}>                  
-                    <h3 className="font-bold  font-serif text-lg 2xl:text-xl">{item.event}</h3>
+                    <div className={`absolute bg-stone-800 p-1 rounded-md mt-2 left-0 top-17 md:top-20 2xl:top-20 text-sm text-start w-full transition-opacity duration-500 ease-in-out ${loading ? "opacity-0" : "opacity-100"}`}>                  
+                    <h3 className="font-bold  font-serif text-lg md:text-xl">{item.event}</h3>
                     <div className="flex gap-2">
                       {item.image && (
                         <img src={item.image} alt="Company Logo" className=" size-5 rounded-sm" />
@@ -208,7 +290,7 @@ function About() {
                       <em className="flex font-serif ">{item.company}</em>
                     </div> 
                     <p className="font-bold font-mono">{item.date}</p>
-                    <ul className="list-disc list-inside text-left text-sm 2xl:text-lg">
+                    <ul className="list-disc text-left text-sm md:text-lg">
                       {Array.isArray(item.details) ? (
                           item.details.map((detail, indx) => <li key={indx}>{detail}</li>)
                         ) : (

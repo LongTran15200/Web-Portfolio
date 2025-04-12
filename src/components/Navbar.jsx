@@ -28,7 +28,7 @@ function Navbar() {
   }, []);
 
   return (
-    <nav className=" bg-stone-800 p-2 w-full flex items-center justify-between">
+    <nav className=" bg-stone-800 p-2 w-full flex items-center justify-between fixed top-0 left-0 z-50">
       {/* Logo */}
       <Link to="/"><img
         className=" md:hidden object-cover h-15 w-auto transition-transform duration-300 ease-in-out transform hover:scale-110"
