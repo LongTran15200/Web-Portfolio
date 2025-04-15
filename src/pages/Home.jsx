@@ -48,7 +48,7 @@ function Home() {
           ><i className="fa-brands fa-discord"></i>
           </a>
           <a 
-            href="/contact" 
+            href="/Web-Portfolio/contact" 
             className="text-gray-400 text-3xl duration-300 ml-2"
           ><i className="fa-solid fa-envelope"></i>
           </a>

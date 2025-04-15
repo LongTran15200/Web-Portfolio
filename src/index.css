@@ -58,6 +58,17 @@
     color:#A87F1D;
     transform:scale(150%)
   }
+
+  .custom-color{
+    background-color:#ac7b0b;
+    font-family:'Roboto', sans-serif;
+    transition: all 0.3s ease 0s;
+  }
+  
+  .custom-color:hover{
+    background-color:#835705;
+    transform: translateY(-7px);
+  }
   .btn button{
     background-color:#ac7b0b;
     font-family:'Roboto', sans-serif;

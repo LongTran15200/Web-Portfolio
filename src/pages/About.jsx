@@ -21,21 +21,34 @@ function About() {
       description: "Showcasing my skills and some IT/cybersecurity Certification.",
       skills: {
         programmingLanguages: [
-          { name: "Python", icon: <FaPython size={30} /> },
-          { name: "JavaScript", icon: <FaJs size={30} /> },
+          "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg",
+          "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+          "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
+          "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
         ],
         frameworks: [
-          { name: "React", icon: <FaReact size={30} /> },
-          { name: "Django", icon: <SiDjango size={30} /> },
+          "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg",
+          "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg",
+          "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg",
+          "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original-wordmark.svg",
         ],
         databases: [
-          { name: "MySQL", icon: <DiMysql size={30} /> },
-          { name: "MongoDB", icon: <DiMongodb size={30} /> },
+          "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original-wordmark.svg",
+          "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg",
+          "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original-wordmark.svg",
         ],
         tools: [
-          { name: "Git", icon: <FaGitAlt size={30} /> },
-          { name: "TailwindCSS", icon: <SiTailwindcss size={30} /> },
+          "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
+          "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+          "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg",
+          "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original-wordmark.svg",
         ],
+        certs: [
+          {url:"https://github.com/LongTran15200/Pentesterlab-Essential-Challenges/blob/main/Essential%20certification.pdf",label:"Essential Cert"},
+          {url:"https://github.com/LongTran15200/PentesterLab-HTTP-Challenges/blob/main/HTTP%20certification.pdf",label:"HTTP Cert"},
+          {url:"https://www.coursera.org/account/accomplishments/professional-cert/SBC7EWVCDCQT?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=pdf_header_button&utm_product=prof",label:"Google IT Cert"},
+          {url:"https://github-production-user-asset-6210df.s3.amazonaws.com/128632373/260363846-335ff496-07ac-4c1d-acb5-7609433645ee.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20250415%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250415T040126Z&X-Amz-Expires=300&X-Amz-Signature=c3c26e6660b9514eb5b779121b117aad8bbf889c04a7e6ff3f5d0f7c9870ef45&X-Amz-SignedHeaders=host",label:"SWE Virtual Cert"},
+        ]
       },
     },
     { 
@@ -171,67 +184,48 @@ function About() {
 
         <div className="flex-1 text-center justify-center items-center rounded-2xl ">
           <h2 className="text-2xl font-bold mb-6 border-b border-amber-500 p-[4.3px] ">{slides[currentSlide].title}</h2>
-          <div>
+          <div></div>
           {currentSlide === 0 && (
-           <div className="space-y-6 mb-4">
-           <div className="flex items-center">
-             <h3 className="text-xl font-semibold mb-2">Languages:</h3>
-             <div className="flex gap-4 justify-center flex-wrap">
-               {slides[currentSlide].skills.programmingLanguages.map((skill, index) => (
-                 <div key={index} className="p-2 text-center group relative">
-                   <div className="text-center">{skill.icon}</div>
-                   <span className="absolute left-1/2 transform -translate-x-1/2 mb-2 p-1 bg-black text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity">
-                     {skill.name}
-                   </span>
-                 </div>
-               ))}
-             </div>
-           </div>
-         
-           <div className="flex items-center">
-             <h3 className="text-xl font-semibold mb-2">Frameworks:</h3>
-             <div className="flex gap-4 justify-center flex-wrap">
-               {slides[currentSlide].skills.frameworks.map((skill, index) => (
-                 <div key={index} className="p-2 text-center group relative">
-                   <div className="text-center">{skill.icon}</div>
-                   <span className="absolute left-1/2 transform -translate-x-1/2 mb-2 p-1 bg-black text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity">
-                     {skill.name}
-                   </span>
-                 </div>
-               ))}
-             </div>
-           </div>
-         
-           <div className="flex items-center">
-             <h3 className="text-xl font-semibold mb-2">Databases:</h3>
-             <div className="flex gap-4 justify-center flex-wrap">
-               {slides[currentSlide].skills.databases.map((skill, index) => (
-                 <div key={index} className="p-2 text-center group relative">
-                   <div className="text-center">{skill.icon}</div>
-                   <span className="absolute left-1/2 transform -translate-x-1/2 mb-2 p-1 bg-black text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity">
-                     {skill.name}
-                   </span>
-                 </div>
-               ))}
-             </div>
-           </div>
-         
-           <div className="flex items-center">
-             <h3 className="text-xl font-semibold mb-2">Tools:</h3>
-             <div className="flex gap-4 justify-center flex-wrap">
-               {slides[currentSlide].skills.tools.map((skill, index) => (
-                 <div key={index} className="p-2 text-center group relative">
-                   <div className="text-center">{skill.icon}</div>
-                   <span className="absolute left-1/2 transform -translate-x-1/2 mb-2 p-1 bg-black text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity">
-                     {skill.name}
-                   </span>
-                 </div>
-               ))}
-             </div>
-           </div>
-         </div>
-          )}
+          <div className="space-y-6">
+            {[
+              { label: "Languages", skills: slides[0].skills.programmingLanguages },
+              { label: "Frameworks", skills: slides[0].skills.frameworks },
+              { label: "Databases", skills: slides[0].skills.databases },
+              { label: "Tools", skills: slides[0].skills.tools },
+            ].map((group, index) => (
+              <div key={index}>
+                <h3 className="text-lg font-semibold mb-2 underline">{group.label}</h3>
+                <div className="flex gap-4 flex-wrap justify-center items-center">
+                  {group.skills.map((src, i) => (
+                    <img
+                      key={i}
+                      src={src}
+                      alt={`${group.label} icon ${i}`}
+                      className="w-10 h-10 object-contain hover:scale-110 transition-transform duration-200"
+                    />
+                  ))}
+                </div>
+              </div>
+            ))}
+            <div className="flex-row flex gap-4 justify-center">
+            {slides[currentSlide].skills?.certs?.map((cert, index) => (
+              <a
+                key={index}
+                href={cert.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="custom-color w-20 h-20 sm:h-20 transition-transform hover:scale-105 rounded-md "
+              >{cert.label}
+                {/* <img
+                  src={certUrl}
+                  alt={`Certification ${index + 1}`}
+                  className="w-24 h-24 object-contain m-2 rounded shadow-md"
+                /> */}
+              </a>
+            ))}
+            </div>
           </div>
+          )}
           {( currentSlide === 2 || currentSlide === 4) && (
           <div className="flex justify-center items-center w-full ">
           <img
@@ -269,7 +263,7 @@ function About() {
             )}
           </div>
           {currentSlide === 1 && (
-            <ul className="flex relative gap-4 h-[63vh] sm:h-[40vh] justify-between mx-3 2xl:mx-10">
+            <ul className="flex relative gap-3 h-[63vh] sm:h-[40vh] justify-between mx-3 2xl:mx-10">
               {slides[currentSlide].timeline.map((item, index) => (
                 <li key={index} className="btn h-[8vh] flex ">
                   {/* Button for event */}
@@ -306,7 +300,7 @@ function About() {
           <p className="text-lg mb-5 p-2 font-serif">{slides[currentSlide].description}</p>
         </div>
       </div>
-      <div className="bottom-10 flex items-center gap-4 text-white">
+      <div className="flex items-center gap-4 text-white">
         <BiChevronLeft className="w-6 h-6 cursor-pointer" onClick={handlePrev} />
         <div className="flex gap-2">
           {slides.map((_, index) => (
@@ -320,7 +314,6 @@ function About() {
         <BiChevronRight className="w-6 h-6 cursor-pointer" onClick={handleNext} />
       </div>
     </div>
-    
   );
 }
 

@@ -7,7 +7,7 @@ function Contact() {
       <div className="flex flex-col text-center text-white space-y-5">
         <h2 className="text-3xl font-semibold mb-6">Contact Me</h2>
         <div className=" -mt-3 border-amber-500 w-14 mx-auto border-b-2"></div>
-        <p className="lg:text-lg items-center md:w-[40rem]">If you have any questions, inquiries, or collaboration opportunities, please don’t hesitate to reach out by completing the form below or contact me through my email at: <span className="underline">Long.tran832@gmail.com</span></p>
+        <p className="lg:text-lg items-center md:w-[40rem]">If you have any questions, inquiries, or collaboration opportunities, please don’t hesitate to reach out by completing the form below or contact me through my email at: <a className="underline" href="mailto:long.tran832@gmail.com">Long.tran832@gmail.com</a></p>
       </div>
       <div className="flex p-7 bg-stone-900 rounded-xl border-1 border-amber-500 shadow-lg ">
         <div className="text-white max-w-md space-y-5">
