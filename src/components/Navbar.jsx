@@ -28,7 +28,7 @@ function Navbar() {
   }, []);
 
   return (
-    <nav className=" bg-stone-800 p-2 w-full flex items-center justify-between fixed top-0 left-0 z-50">
+    <nav className="p-2 w-full flex items-center justify-between fixed top-0 left-0 z-50">
       {/* Logo */}
       <Link to="/"><img
         className=" md:hidden object-cover h-15 w-auto transition-transform duration-300 ease-in-out transform hover:scale-110"
@@ -63,7 +63,7 @@ function Navbar() {
       {/* Mobile Dropdown */}
       <div
         ref={menuRef}  // Ref for the dropdown menu
-        className={`dropdown absolute top-12 right-2 bg-gray-100 rounded-lg shadow-lg w-40 md:hidden transition-all duration-300 ease-in-out transform ${
+        className={`dropdown absolute top-14.5 right-2  rounded-lg shadow-lg w-40 md:hidden transition-all duration-300 ease-in-out transform ${
           isOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
         } z-50`}
       >

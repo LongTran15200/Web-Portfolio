@@ -4,7 +4,7 @@ import ResumePDF from "../assets/Long_RESUME2025.pdf";
 
 function Home() {
   return (
-    <div className="bg-stone-800 min-h-screen flex flex-col-reverse sm:flex-row items-center justify-center p-4 sm:p-8 pt-20">
+    <div className="min-h-screen flex flex-col-reverse sm:flex-row items-center justify-center p-4 sm:p-8 pt-20">
       {/* Content Section */}
       <div className="content ">
         <h1 className="text-4xl sm:text-6xl text-center text-gray-400 font-serif">
