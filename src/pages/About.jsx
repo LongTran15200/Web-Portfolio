@@ -1,9 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
-import { FaPython, FaJs, FaReact, FaNodeJs, FaGitAlt } from "react-icons/fa";
-import { DiMysql, DiMongodb } from "react-icons/di";
-import { SiDjango, SiTailwindcss } from "react-icons/si";
-import { BiCheck } from 'react-icons/bi';
+import React, { useState} from "react";
+import { BiChevronLeft, BiChevronRight,BiCheck } from "react-icons/bi";
 import GymImg from "../assets/Military.png";
 import FormalImg from "../assets/Formal2.png"; 
 import CookImg from "../assets/Cook.jpg";
@@ -91,13 +87,13 @@ function About() {
 
         { month: "Jan", 
           year: "2025", 
-          event: "IT Administrator Intern", 
+          event: "Software Engineer Intern", 
           image: OFSIImg, 
           company:"OFS International", 
           date:"Jan. 2025 – March. 2025",
-          details: [" End-User Support & Troubleshooting: Provided technical support to end users, diagnosing problems in software, systems, and networks with a focus on TCP/IP protocols in a Microsoft Windows LAN environment.",
-            "System Installation & Maintenance: Installed, configured, and maintained hardware and software systems, including upgrades and custom configurations to improve operational efficiency.",
-            "Cross-Department Collaboration & Training: Assisted departments with technical resources, provided training in company software, ensured system stability, achieving a 95% issue resolution rate within the SLA time."
+          details: [" Contributed to the full-stack redevelopment of the company website by collaborating with contractors on frontend enhancements, responsive design, and backend integration.",
+            "Built Python scripts to support backend data processing and form workflows, integrating with RESTful APIs to enhance site functionality.",
+            " Participated in system design discussions, Git-based version control, and QA/testing cycles to improve code quality and deployment reliability."
           ]},
       ],
     },
