@@ -63,9 +63,9 @@ function Home() {
       </div>
 
       {/* Profile Image Section */}
-      <div className="sm:pt-0 bg-opacity-50 group-hover:blur-sm transition-all duration-300">
+      <div className="sm:pt-0 bg-opacity-50 group-hover:blur-sm transition-all rounded-full duration-300">
         <img 
-          className="object-cover w-50 sm:w-70 md:w-95 lg:w-100 xl:w-110 rounded-full rounded-bl-none rounded-br-none transition-transform duration-300 ease-in-out transform hover:scale-102"
+          className="object-cover sm:w-70 md:w-95 lg:w-100 xl:w-110 rounded-full transition-transform duration-300 ease-in-out transform hover:scale-102"
           src={ProfileImg} 
           alt="ProfileImg" 
           loading="lazy"

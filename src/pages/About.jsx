@@ -12,7 +12,7 @@ import LoneSImg from "../assets/LoneStar.png";
 function About() {
   const slides = [
     {
-      image:GymImg,
+      image: DrawingImg,
       title: "Skill & Certification",
       description: "Showcasing my skills and some IT/cybersecurity Certification.",
       skills: {
